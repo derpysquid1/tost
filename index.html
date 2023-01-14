@@ -1,0 +1,81 @@
+
+<html lang="eng">
+    <head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>ILLENIUM</title>
+    <link rel="shortcut icon" type="image/jpg" href="/new/asset/IILLENIUM.jpg"/>
+    <script src="https://kit.fontawesome.com/c0a63b1962.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/new/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="http:///ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    </head>
+    <body>
+   <!--introduction-->
+    <section class="header">
+        <nav>
+            <a href="#"><img src="/new/asset/Illenium logo.png"></a>         
+                <div class="nav-links" id="navLinks">
+               <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>        
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Album</a></li>
+                        <li><a href="#">Songs</a></li> 
+                        <li><a href="#">Art</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>    
+                 <i class="fa-solid fa-bars" onclick="showMenu()"></i>       
+        </nav>
+        
+        <div class="textbox">
+            <h1>ILLENIUM</h1>
+            <p>Nicholas Daniel Miller (born December 26, 1990), professionally known as Illenium, is an American DJ, record producer, and songwriter. He has released four studio albums, his most recent being Fallen Embers, released in July 2021. It earned Illenium his first Grammy nomination. One of Illenium's more notable albums, Ascend, was released in August 2019 on Astralwerks. The album was Illenium's first to top the Billboard Dance/Electronic Albums chart and also reached his highest peak on the Billboard 200 at number 14.
+                Several of Illenium's songs have appeared on the Billboard Hot Dance/Electronic Songs chart, including two singles in 2019 that peaked at number 3: "Good Things Fall Apart" with Jon Bellion and "Takeaway" with the Chainsmokers (featuring Lennon Stella). Illenium has also worked on numerous notable remixes, including those for the Chainsmokers' "Don't Let Me Down" and Flume's "Say It", the latter of which won the award for "Remix of the Year" at the inaugural Electronic Music Awards in 2017. He was included in the Forbes 30 Under 30 music list in 2020.
+            </p>
+            <!--button-->
+            <a class="first-button page-scoll" id="page-scroll" href="#album">Click Here To See More</a>
+            <!--end of button-->
+        </div>
+    </section>
+
+    <!--end of introduction-->
+
+    <!---Album-->
+    <section class="album" id="album"> 
+        <div class="ascend">
+            <h1 class="first">ILLENIUM Albums</h1>
+            <p class="first">Ashes, Awake, Ascend, and Fallen Embers.</p>
+                <grid-container>
+                    <grid-item short></grid-item>
+                    <grid-item ashes></grid-item>
+                    <grid-item></grid-item>
+                </grid-container>
+        </div>
+    </section>
+
+    <!---java script toggle menu--->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+
+    </script>
+    <!--end of java script toggle menu-->
+
+    <!--java script sliding-->
+<script>
+    
+
+
+</script>
+    <!--end of java script sliding-->
+    </body>
+</html>
