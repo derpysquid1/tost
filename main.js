@@ -1,8 +1,2 @@
-alert('kontol')
+alert('lmao')
 
-$('.page-Scroll').on('click', function() {
-
-    console.log(ok);
-    
-})();
-    
