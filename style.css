@@ -1,4 +1,4 @@
-v*{
+*{
     margin: 0;
     padding: 0;
 }
@@ -120,7 +120,6 @@ nav img {
 }
 
 .ashes {
-    position: relative;
     left: 238px;
     top: 100px;
 }
@@ -128,7 +127,7 @@ nav img {
 .ascend {
     min-height: 100vh;
     width: 100%;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -232,6 +231,9 @@ grid-container {
   .fall {
     position: relative;
     left: 250px;
+    align-items: center;
+    justify-content: center;
+    
   }
   .sad {
     position: relative;
@@ -246,6 +248,171 @@ grid-container {
     font-size: 48px;
 
   }
+/**/
+  .sliding{
+width: 100vw;
+height: 100vh;
+background-color: #000000;
+}
+
+.slid {
+    position: absolute;
+    top: 80;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo{
+    width: 500px;
+    height: 500px;
+    aspect-ratio: 3/3;
+    background-size: contain ;
+}
+
+  .slider{
+    position: relative;
+    background: #000116;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+
+  }
+  
+  .slider .slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 0 50%);
+    
+    
+  }
+  
+  .slider .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+  }
+  
+  .slider .slide img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slider .slide .info{
+    position: absolute;
+    color: #222;
+    background: rgba(255, 255, 255, 0.3);
+    width: 75%;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+  }
+  
+  .slider .slide .info h2{
+    font-size: 2em;
+    font-weight: 800;
+  }
+  
+  .slider .slide .info p{
+    font-size: 1em;
+    font-weight: 400;
+  }
+  
+  .navigation{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .slider:hover .navigation{
+    opacity: 1;
+  }
+  
+  .prev-btn, .next-btn{
+    z-index: 999;
+    font-size: 2em;
+    color: #222;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    cursor: pointer;
+    
+  }
+  
+  .prev-btn{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    position: absolute;
+    left: 0;
+  }
+  
+  .next-btn{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    position: absolute;
+    right: 0;
+  }
+  
+  .navigation-visibility{
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .navigation-visibility .slide-icon{
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.5);
+    width: 20px;
+    height: 10px;
+    transform: translateY(-50px);
+    margin: 0 6px;
+    border-radius: 2px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    position: relative;
+    bottom: 0;
+  }
+  
+  .navigation-visibility .slide-icon.active{
+    background: #4285F4;
+  }
+  
+  @media (max-width: 900px){
+    .slider{
+      width: 100%;
+    }
+  
+    .slider .slide .info{
+      position: relative;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (max-width: 500px){
+    .slider .slide .info h2{
+      font-size: 1.8em;
+      line-height: 40px;
+    }
+  
+    .slider .slide .info p{
+      font-size: 0.9em;
+    }
+  }
+        
 /*The end of regular*/
 
 nav .fa-solid.fa-xmark, nav .fa-solid.fa-bars {
@@ -274,26 +441,47 @@ nav .fa-solid.fa-xmark, nav .fa-solid.fa-bars {
 
     .fall {
         position:relative;
-        left: 70px;
+        left: 0;
+        margin: auto;
         display: grid;
         grid-auto-flow: row;
         grid-row: 25%;
         grid-gap: 50px;
+        
     }
+    
+
 
     .awake{
         position:relative;
+        /*
         left: 25px;
         top: -70px;
+        */
         display: grid;
         grid-auto-flow: row;
         grid-row: 25%;
         grid-gap: 20px;
     }
 
+    .awake2{
+        position: relative;
+        left: 0;
+        top: 0;
+        margin:auto;
+    }
+    
+    .scroll{
+        background-color: #000000;
+        overflow-y: scroll;
+        height: 450px;
+        
+    }
     .sad {
         position: relative;
-        left: 90px;
+        left: 0;
+        margin: auto;
+        display: block;
     }
 
     .text {
