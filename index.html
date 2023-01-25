@@ -18,7 +18,7 @@
    <!--introduction-->
         <section class="header">
             <nav>
-                <a href="#"><img src=https://png2.cleanpng.com/sh/6e1190abcc4950c75b180a96b5227a5a/L0KzQYm3WMA6N5xvR91yc4Pzfri0jP9od154h59CcnBxd37rigNkNZt0e91ueT3ndcTwhB4ud5VqiAxqLXnvfLb1igVuNaJ6hAY2c3Awh8P2jvcueaZ0jJ98b37qPbFtTgRpbV5pees2NXK5c4PpU8k1P2U2fqU3Nki8QYOAUcIyPWQ4UKMANkC8Qoq4Wb5xdpg=/kisspng-logo-so-wrong-disc-jockey-design-odesza-illenium-quot-so-wrong-quot-song-of-the-day-5b6c2b394741f3.6891271215338156092919.png></a>         
+                <a href="#"><img  src=https://artists.ultramusicfestival.com/wp-content/uploads/2018/05/illenium.png></a>         
                     <div class="nav-links" id="navLinks">
                 <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>        
                         <ul>
@@ -51,8 +51,8 @@
             <div class="ascend">
                 <h1 class="first">ILLENIUM Albums</h1>
                 <p class="first">Ashes, Awake, Ascend, and Fallen Embers.</p>
-               <div class="awake"> 
-                    <div class="flip-card ">
+               <div class="awake scroll"> 
+                    <div class="flip-card awake2">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">           
                                 <img ashes src="https://ia800206.us.archive.org/5/items/mbid-cc727a6c-2aa4-45fa-ada3-4961b3653931/mbid-cc727a6c-2aa4-45fa-ada3-4961b3653931-18717144024.jpg">            
@@ -64,7 +64,7 @@
                         </div>
                                     </div>  
                                             
-                    <div class="flip-card ">
+                    <div class="flip-card awake2">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">           
                                 <img ashes src="https://ia800600.us.archive.org/19/items/mbid-34787776-9f95-4c3c-bd44-3aec2d5f6a3c/mbid-34787776-9f95-4c3c-bd44-3aec2d5f6a3c-20307961756.jpg">            
@@ -75,7 +75,7 @@
                                     
                         </div>
                                     </div>             
-                    <div class="flip-card ">
+                    <div class="flip-card awake2">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">           
                                 <img ashes src="https://ia803106.us.archive.org/28/items/mbid-f4811d36-1794-4c8c-ae87-963ffdb76c97/mbid-f4811d36-1794-4c8c-ae87-963ffdb76c97-25103520953.jpg">            
@@ -133,6 +133,120 @@
             </div> 
         </section>
 
+        <section class="sliding">
+            
+            <div class="slider slid">
+                <div class="slide active">
+                <img class="photo" src="https://ia800206.us.archive.org/5/items/mbid-cc727a6c-2aa4-45fa-ada3-4961b3653931/mbid-cc727a6c-2aa4-45fa-ada3-4961b3653931-18717144024.jpg" alt="">
+                </div>
+                <div class="slide">
+                <img  class="photo" src="https://ia800600.us.archive.org/19/items/mbid-34787776-9f95-4c3c-bd44-3aec2d5f6a3c/mbid-34787776-9f95-4c3c-bd44-3aec2d5f6a3c-20307961756.jpg" alt="">
+                </div>
+                <div class="slide">
+                <img  class="photo" src="https://ia803106.us.archive.org/28/items/mbid-f4811d36-1794-4c8c-ae87-963ffdb76c97/mbid-f4811d36-1794-4c8c-ae87-963ffdb76c97-25103520953.jpg" alt="">
+                </div>
+                <div class="slide">
+                <img  class="photo" src="https://ia903102.us.archive.org/4/items/mbid-a001e836-a539-449a-8163-8ad8d4755bbe/mbid-a001e836-a539-449a-8163-8ad8d4755bbe-29702593191.jpg" alt="">
+                </div>
+                <div class="slide">
+                <img  class="photo"src="https://i.pinimg.com/originals/97/c2/4c/97c24c1dff5d72bc7408ca0a6a2b799f.jpg" alt="">
+                </div>
+                <div class="navigation">
+                <i class="fas fa-chevron-left prev-btn"></i>
+                <i class="fas fa-chevron-right next-btn"></i>
+                </div>
+                <div class="navigation-visibility">
+                <div class="slide-icon active"></div>
+                <div class="slide-icon"></div>
+                <div class="slide-icon"></div>
+                <div class="slide-icon"></div>
+                <div class="slide-icon"></div>
+                </div>
+            </div>
+        </section>
+
+        <script type="text/javascript">
+            const slider = document.querySelector(".slider");
+            const nextBtn = document.querySelector(".next-btn");
+            const prevBtn = document.querySelector(".prev-btn");
+            const slides = document.querySelectorAll(".slide");
+            const slideIcons = document.querySelectorAll(".slide-icon");
+            const numberOfSlides = slides.length;
+            var slideNumber = 0;
+        
+            //image slider next button
+            nextBtn.addEventListener("click", () => {
+              slides.forEach((slide) => {
+                slide.classList.remove("active");
+              });
+              slideIcons.forEach((slideIcon) => {
+                slideIcon.classList.remove("active");
+              });
+        
+              slideNumber++;
+        
+              if(slideNumber > (numberOfSlides - 1)){
+                slideNumber = 0;
+              }
+        
+              slides[slideNumber].classList.add("active");
+              slideIcons[slideNumber].classList.add("active");
+            });
+        
+            //image slider previous button
+            prevBtn.addEventListener("click", () => {
+              slides.forEach((slide) => {
+                slide.classList.remove("active");
+              });
+              slideIcons.forEach((slideIcon) => {
+                slideIcon.classList.remove("active");
+              });
+        
+              slideNumber--;
+        
+              if(slideNumber < 0){
+                slideNumber = numberOfSlides - 1;
+              }
+        
+              slides[slideNumber].classList.add("active");
+              slideIcons[slideNumber].classList.add("active");
+            });
+        
+            //image slider autoplay
+            var playSlider;
+        
+            var repeater = () => {
+              playSlider = setInterval(function(){
+                slides.forEach((slide) => {
+                  slide.classList.remove("active");
+                });
+                slideIcons.forEach((slideIcon) => {
+                  slideIcon.classList.remove("active");
+                });
+        
+                slideNumber++;
+        
+                if(slideNumber > (numberOfSlides - 1)){
+                  slideNumber = 0;
+                }
+        
+                slides[slideNumber].classList.add("active");
+                slideIcons[slideNumber].classList.add("active");
+              }, 4000);
+            }
+            repeater();
+        
+            //stop the image slider autoplay on mouseover
+            slider.addEventListener("mouseover", () => {
+              clearInterval(playSlider);
+            });
+        
+            //start the image slider autoplay again on mouseout
+            slider.addEventListener("mouseout", () => {
+              repeater();
+            });
+            </script>
+
             <!---java script toggle menu--->
             <script>
                 var navLinks = document.getElementById("navLinks");
@@ -145,5 +259,10 @@
 
             </script>
             <!--end of java script toggle menu-->
+
+            <script>
+                alert('lmao')
+            </script>
+
     </body>
 </html>
